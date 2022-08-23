@@ -10,10 +10,10 @@ much easier (without mastering CSS 😋).
 
 ## Animated-Menu
 <div align="center">
-<img src="https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/Animated-Menu/Animation.gif" width="600">
+<img src="https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/assets/AnimatedMenu.gif" width="600">
 </div>
 
 ## Reorder-List
 <div align="center">
-<img src="https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/Reorder-List/Animation.gif" width="600">
+<img src="https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/assets/ReorderList.gif" width="600">
 </div>
