@@ -9,7 +9,11 @@ I know pure CSS is powerful enough to accomplish the goal, but to me this is
 much easier (without mastering CSS 😋).
 
 ## Animated-Menu
-![image](https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/Animated-Menu/Animation.gif)
+<div align="center">
+<img src="https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/Animated-Menu/Animation.gif" width="600">
+</div>
 
 ## Reorder-List
-![image](https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/Reorder-List/Animation.gif)
+<div align="center">
+<img src="https://raw.githubusercontent.com/WesleyCh3n/framer-motion-example/main/Reorder-List/Animation.gif" width="600">
+</div>
