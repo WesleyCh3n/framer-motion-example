@@ -18,7 +18,7 @@ export const ReorderList = () => {
       <Reorder.Group axis="y" values={items} onReorder={setItems}>
         {items.map((item) => (
           <Reorder.Item
-            className="my-2 py-5 bg-blue-300 text-white rounded-lg"
+            className="my-2 py-5 bg-blue-300 text-white rounded-lg relative"
             style={{
               scale: 1,
               background: item.color
