@@ -22,7 +22,7 @@ export const Menu = () => {
     <div className="mt-8 ml-8">
       <motion.div
         className="absolute w-12 h-12 bg-gray-200 cursor-pointer z-10
-      drop-shadow hover:drop-shadow-lg"
+        drop-shadow hover:drop-shadow-lg"
         animate={controls}
         variants={{
           "off": { borderRadius: "50%" },
