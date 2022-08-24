@@ -1,52 +1,11 @@
-import { AnimatePresence, motion, MotionProps } from "framer-motion";
-import { HTMLAttributes, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 import Menu from "./AnimatedMenu";
+import Page from "./Page";
 import ReorderList from "./ReorderList";
-
-const directionOffset = 1500;
-const pageVariants = {
-  enter: (direction: number) => {
-    return {
-      x: direction > 0 ? directionOffset : -directionOffset,
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? directionOffset : -directionOffset,
-      opacity: 0,
-    };
-  },
-};
-
-const Page = (props: HTMLAttributes<HTMLDivElement> & MotionProps) => {
-  return (
-    <motion.div
-      variants={pageVariants}
-      initial="enter"
-      animate="center"
-      exit="exit"
-      transition={{
-        x: {
-          type: "spring",
-          stiffness: 800,
-          damping: 100,
-          duration: 0.1,
-        },
-        opacity: { duration: 0.6 },
-      }}
-      {...props}
-    />
-  );
-};
+import ScrollLink from "./ScrollLink";
 
 function App() {
   const [[id, direction], setId] = useState([0, 0]);
@@ -71,37 +30,40 @@ function App() {
             <Page
               key={1}
               custom={direction}
-              className="w-1/3 bg-white drop-shadow-2xl"
+              className="w-1/3 bg-white drop-shadow-2xl absolute"
             >
               <ReorderList />
             </Page>
           ),
+          2: (
+            <Page
+              key={2}
+              custom={direction}
+              className="w-1/3 h-2/3 bg-white drop-shadow-2xl absolute"
+            >
+              <ScrollLink />
+            </Page>
+          ),
         }[id]}
       </AnimatePresence>
-      <motion.button
+      <button
         className="fixed left-6 h-12 w-12 p-3 z-3 text-gray-600
-        disabled:text-gray-400 disabled:cursor-not-allowed"
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 1.0 }}
+        transition ease-in-out hover:scale-125 active:scale-100
+        disabled:text-gray-400 disabled:cursor-default disabled:hover:scale-100"
         disabled={id === 0 ? true : false}
-        onClick={() => {
-          setId([id - 1, -1]);
-        }}
+        onClick={() => setId([id - 1, -1])}
       >
         {<BiLeftArrow size={40} />}
-      </motion.button>
-      <motion.button
+      </button>
+      <button
         className="fixed right-6 h-12 w-12 p-3 z-3 text-gray-600
-        disabled:text-gray-400 disabled:cursor-not-allowed"
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 1.0 }}
-        disabled={id === 1 ? true : false}
-        onClick={() => {
-          setId([id + 1, 1]);
-        }}
+        transition ease-in-out hover:scale-125 active:scale-100
+        disabled:text-gray-400 disabled:cursor-default disabled:hover:scale-100"
+        disabled={id === 2 ? true : false}
+        onClick={() => setId([id + 1, 1])}
       >
         {<BiRightArrow size={40} />}
-      </motion.button>
+      </button>
     </div>
   );
 }
