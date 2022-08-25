@@ -12,6 +12,7 @@ const initItems = [
   { id: 7, color: "#3b82f6" },
   { id: 8, color: "#8b5cf6" },
 ];
+
 export const ReorderList = () => {
   const [items, setItems] = useState(initItems);
 
