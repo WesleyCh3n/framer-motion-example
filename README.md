@@ -22,3 +22,8 @@ much easier (without mastering CSS 😋).
 <div align="center">
 <img src="./assets/ScrollLink.gif" width="600">
 </div>
+
+## Popover
+<div align="center">
+<img src="./assets/Popover.gif" width="600">
+</div>

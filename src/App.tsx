@@ -4,6 +4,7 @@ import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 import Menu from "./AnimatedMenu";
 import Page from "./Page";
+import { Popover } from "./Popover";
 import ReorderList from "./ReorderList";
 import ScrollLink from "./ScrollLink";
 import SwipeAction from "./SwipeAction";
@@ -45,6 +46,15 @@ const Pages = (direction: number) => ({
       className="w-[30vw] h-[30vw] block bg-blue-200 drop-shadow-2xl absolute"
     >
       <SwipeAction />
+    </Page>
+  ),
+  4: (
+    <Page
+      key={4}
+      custom={direction}
+      className="w-96 h-72 block bg-white drop-shadow-2xl absolute"
+    >
+      <Popover />
     </Page>
   ),
 });
