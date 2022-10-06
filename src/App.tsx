@@ -41,20 +41,20 @@ const Pages = (direction: number) => ({
   ),
   3: (
     <Page
-      key={3}
-      custom={direction}
-      className="w-[30vw] h-[30vw] block bg-blue-200 drop-shadow-2xl absolute"
-    >
-      <SwipeAction />
-    </Page>
-  ),
-  4: (
-    <Page
       key={4}
       custom={direction}
       className="w-96 h-72 block bg-white drop-shadow-2xl absolute"
     >
       <Popover />
+    </Page>
+  ),
+  4: (
+    <Page
+      key={3}
+      custom={direction}
+      className="w-[30vw] h-[30vw] block bg-blue-200 drop-shadow-2xl absolute"
+    >
+      <SwipeAction />
     </Page>
   ),
 });
