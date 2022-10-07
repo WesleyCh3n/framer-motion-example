@@ -63,3 +63,5 @@ export const Popover = () => {
     </LazyMotion>
   );
 };
+
+export default Popover;

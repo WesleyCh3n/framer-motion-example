@@ -61,3 +61,5 @@ ${isOpen ? "translate-x-0" : "translate-x-[-100%]"}
     </div>
   );
 };
+
+export default Navbar;
