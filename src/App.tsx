@@ -3,11 +3,11 @@ import { useState } from "react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 import Menu from "./AnimatedMenu";
+import { Navbar } from "./Navbar";
 import Page from "./Page";
 import { Popover } from "./Popover";
 import ReorderList from "./ReorderList";
 import ScrollLink from "./ScrollLink";
-import SwipeAction from "./SwipeAction";
 
 const Pages = (direction: number) => ({
   0: (
@@ -41,22 +41,31 @@ const Pages = (direction: number) => ({
   ),
   3: (
     <Page
-      key={4}
+      key={3}
       custom={direction}
-      className="w-96 h-72 block bg-white drop-shadow-2xl absolute"
+      className="w-96 h-72 block bg-slate-50 drop-shadow-2xl absolute"
     >
       <Popover />
     </Page>
   ),
   4: (
     <Page
-      key={3}
+      key={4}
+      custom={direction}
+      className="w-1/2 h-1/2 block bg-slate-50 drop-shadow-2xl absolute overflow-clip"
+    >
+      <Navbar />
+    </Page>
+  ),
+  /* 10: (
+    <Page
+      key={10}
       custom={direction}
       className="w-[30vw] h-[30vw] block bg-blue-200 drop-shadow-2xl absolute"
     >
       <SwipeAction />
     </Page>
-  ),
+  ), */
 });
 
 function App() {

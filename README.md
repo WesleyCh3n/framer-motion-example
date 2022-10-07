@@ -27,3 +27,10 @@ much easier (without mastering CSS 😋).
 <div align="center">
 <img src="./assets/Popover.gif" width="600">
 </div>
+
+## NavBar
+<div align="center">
+<img src="./assets/NavBar.gif" width="600">
+</div>
+
+> **Note**: NavBar didn't use framer
